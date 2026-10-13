@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Irrigation Advisory | TerraFlow
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="app.js">
+  </script>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <button aria-label="Toggle navigation" class="nav-toggle">
+    ☰
+   </button>
+   <nav class="nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="farm-info.html">
+     Farm Dashboard
+    </a>
+    <a class="active" href="advisory.html">
+     Advisory
+    </a>
+    <a href="gallery.html">
+     Gallery
+    </a>
+    <a href="plot-map.html">
+     Plot Map
+    </a>
+    <a href="irrigation-table.html">
+     Sensor Data
+    </a>
+    <a href="registration.html">
+     Registration
+    </a>
+    <a href="weather.html">
+     Weather
+    </a>
+    <a href="media.html">
+     Media
+    </a>
+    <a href="heatwave-validation.html">
+     Heatwave Form
+    </a>
+    <a href="heatwave-analysis.html">
+     Analytics
+    </a>
+   </nav>
+  </header>
+  <section class="page-head">
+   <span class="kicker">
+    DECISION SUPPORT / RULE ENGINE
+   </span>
+   <h1>
+    Irrigation advisory
+   </h1>
+   <p>
+    Provide a moisture reading and expected rainfall to see a basic rule-based recommendation. Use it for learning, not as an agronomic prescription.
+   </p>
+  </section>
+  <main class="content">
+   <div class="layout-2">
+    <section class="card">
+     <h2>
+      Enter field conditions
+     </h2>
+     <form id="advisoryForm">
+      <div class="field-grid">
+       <div class="field">
+        <label for="plotId">
+         Plot ID
+        </label>
+        <input id="plotId" placeholder="TF-101"/>
+       </div>
+       <div class="field">
+        <label for="moisture">
+         Soil moisture (%) *
+        </label>
+        <input id="moisture" max="100" min="0" required="" type="number" value="38"/>
+       </div>
+       <div class="field">
+        <label for="rain">
+         Rain expected? *
+        </label>
+        <select id="rain" required="">
+         <option value="no">
+          No rain expected
+         </option>
+         <option value="yes">
+          Rain expected
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <label for="stage">
+         Crop stage *
+        </label>
+        <select id="stage" required="">
+         <option value="Germination">
+          Germination
+         </option>
+         <option selected="" value="Tillering">
+          Tillering
+         </option>
+         <option value="Grand Growth">
+          Grand Growth
+         </option>
+         <option value="Maturity">
+          Maturity
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <label for="area">
+         Area (acres)
+        </label>
+        <input id="area" min="0.1" step="0.1" type="number" value="1"/>
+       </div>
+       <div class="field">
+        <label for="soil">
+         Soil type
+        </label>
+        <select id="soil">
+         <option>
+          Loamy
+         </option>
+         <option>
+          Black soil
+         </option>
+         <option>
+          Clay
+         </option>
+         <option>
+          Sandy
+         </option>
+         <option>
+          Alluvial
+         </option>
+        </select>
+       </div>
+      </div>
+      <div class="form-actions">
+       <button class="button primary" type="submit">
+        Generate advice &nearrow;
+       </button>
+       <button class="button secondary" type="reset">
+        Reset
+       </button>
+      </div>
+     </form>
+     <div aria-live="polite" class="result hidden" id="adviceResult">
+     </div>
+    </section>
+    <aside class="card">
+     <span class="kicker">
+      SAMPLE DECISION BANDS
+     </span>
+     <h2>
+      How this demo works
+     </h2>
+     <ul class="list">
+      <li>
+       <span>
+        Moisture below 30%
+       </span>
+       <span class="pill alert">
+        Low
+       </span>
+      </li>
+      <li>
+       <span>
+        30%&ndash;50%
+       </span>
+       <span class="pill warn">
+        Monitor
+       </span>
+      </li>
+      <li>
+       <span>
+        Rain expected
+       </span>
+       <span class="pill warn">
+        Recheck later
+       </span>
+      </li>
+      <li>
+       <span>
+        Above 50%
+       </span>
+       <span class="pill">
+        Moist
+       </span>
+      </li>
+     </ul>
+     <div class="note">
+      Rainfall takes priority in the demo rules. Moisture thresholds are illustrative and should be calibrated to crop, soil, sensor type, and local guidance.
+     </div>
+     <h3 style="margin-top:22px">
+      Before taking action
+     </h3>
+     <p>
+      Inspect the soil and irrigation system. Consider recent rainfall and local agricultural recommendations.
+     </p>
+    </aside>
+   </div>
+  </main>
+  <footer class="footer">
+   <a class="brand footer-brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <p>
+    Prasham Chankeshwara &middot; 16010125033
+   </p>
+   <p>
+    &copy; 2026 Academic demo
+   </p>
+  </footer>
+ </body>
+</html>

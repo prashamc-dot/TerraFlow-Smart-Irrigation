@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Heatwave Analytics | TerraFlow
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="app.js">
+  </script>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <button aria-label="Toggle navigation" class="nav-toggle">
+    ☰
+   </button>
+   <nav class="nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="farm-info.html">
+     Farm Dashboard
+    </a>
+    <a href="advisory.html">
+     Advisory
+    </a>
+    <a href="gallery.html">
+     Gallery
+    </a>
+    <a href="plot-map.html">
+     Plot Map
+    </a>
+    <a href="irrigation-table.html">
+     Sensor Data
+    </a>
+    <a href="registration.html">
+     Registration
+    </a>
+    <a href="weather.html">
+     Weather
+    </a>
+    <a href="media.html">
+     Media
+    </a>
+    <a href="heatwave-validation.html">
+     Heatwave Form
+    </a>
+    <a class="active" href="heatwave-analysis.html">
+     Analytics
+    </a>
+   </nav>
+  </header>
+  <section class="page-head">
+   <span class="kicker">
+    HEAT OBSERVATIONS / SUMMARY
+   </span>
+   <h1>
+    Heat condition analytics
+   </h1>
+   <p>
+    Explore the sample observations below and calculate a summary. New validated observations saved in this browser can be included in the analysis.
+   </p>
+  </section>
+  <main class="content">
+   <div class="layout-3">
+    <div class="metric">
+     <small>
+      AVERAGE TEMPERATURE
+     </small>
+     <strong id="avgTemp">
+      38.2&deg;C
+     </strong>
+     <p>
+      Across displayed observations
+     </p>
+    </div>
+    <div class="metric">
+     <small>
+      HIGHEST TEMPERATURE
+     </small>
+     <strong id="maxTemp">
+      41.0&deg;C
+     </strong>
+     <p>
+      Maximum sample value
+     </p>
+    </div>
+    <div class="metric">
+     <small>
+      OBSERVATIONS
+     </small>
+     <strong id="obsCount">
+      4
+     </strong>
+     <p>
+      Sample plus local records
+     </p>
+    </div>
+   </div>
+   <section class="card" style="margin-top:18px">
+    <h2>
+     Observation summary
+    </h2>
+    <div class="table-scroll">
+     <table id="heatTable">
+      <caption>
+       Sample heat observations
+      </caption>
+      <thead>
+       <tr>
+        <th>
+         Location
+        </th>
+        <th>
+         Date
+        </th>
+        <th>
+         Max temperature
+        </th>
+        <th>
+         Humidity
+        </th>
+        <th>
+         Crop stress
+        </th>
+        <th>
+         Demo category
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr data-temp="36.5">
+        <td>
+         North Field
+        </td>
+        <td>
+         2026-10-09
+        </td>
+        <td>
+         36.5&deg;C
+        </td>
+        <td>
+         44%
+        </td>
+        <td>
+         Leaf curling
+        </td>
+        <td>
+         <span class="pill warn">
+          Elevated
+         </span>
+        </td>
+       </tr>
+       <tr data-temp="38.2">
+        <td>
+         Canal Side
+        </td>
+        <td>
+         2026-10-10
+        </td>
+        <td>
+         38.2&deg;C
+        </td>
+        <td>
+         39%
+        </td>
+        <td>
+         Wilting
+        </td>
+        <td>
+         <span class="pill warn">
+          Elevated
+         </span>
+        </td>
+       </tr>
+       <tr data-temp="41">
+        <td>
+         East Plot
+        </td>
+        <td>
+         2026-10-11
+        </td>
+        <td>
+         41.0&deg;C
+        </td>
+        <td>
+         31%
+        </td>
+        <td>
+         Leaf scorch
+        </td>
+        <td>
+         <span class="pill alert">
+          High
+         </span>
+        </td>
+       </tr>
+       <tr data-temp="37.1">
+        <td>
+         Village Farm
+        </td>
+        <td>
+         2026-10-12
+        </td>
+        <td>
+         37.1&deg;C
+        </td>
+        <td>
+         48%
+        </td>
+        <td>
+         No visible stress
+        </td>
+        <td>
+         <span class="pill warn">
+          Elevated
+         </span>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="form-actions">
+     <button class="button primary" id="refreshAnalytics" type="button">
+      Refresh from local form records &orarr;
+     </button>
+     <button class="button secondary" id="downloadAnalytics" type="button">
+      Export CSV &darr;
+     </button>
+    </div>
+    <p aria-live="polite" class="small-note" id="analyticsMessage">
+     Values are illustrative. Refresh to include records saved from the heatwave form in this browser.
+    </p>
+   </section>
+   <div class="note">
+    This page performs a simple descriptive summary only. It is not a meteorological warning service.
+   </div>
+  </main>
+  <footer class="footer">
+   <a class="brand footer-brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <p>
+    Prasham Chankeshwara &middot; 16010125033
+   </p>
+   <p>
+    &copy; 2026 Academic demo
+   </p>
+  </footer>
+ </body>
+</html>

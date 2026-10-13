@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Farmer Registration | TerraFlow
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="app.js">
+  </script>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <button aria-label="Toggle navigation" class="nav-toggle">
+    ☰
+   </button>
+   <nav class="nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="farm-info.html">
+     Farm Dashboard
+    </a>
+    <a href="advisory.html">
+     Advisory
+    </a>
+    <a href="gallery.html">
+     Gallery
+    </a>
+    <a href="plot-map.html">
+     Plot Map
+    </a>
+    <a href="irrigation-table.html">
+     Sensor Data
+    </a>
+    <a class="active" href="registration.html">
+     Registration
+    </a>
+    <a href="weather.html">
+     Weather
+    </a>
+    <a href="media.html">
+     Media
+    </a>
+    <a href="heatwave-validation.html">
+     Heatwave Form
+    </a>
+    <a href="heatwave-analysis.html">
+     Analytics
+    </a>
+   </nav>
+  </header>
+  <section class="page-head">
+   <span class="kicker">
+    FARM PROFILE / REGISTRATION
+   </span>
+   <h1>
+    Register a farmer and plot
+   </h1>
+   <p>
+    Enter the details below. JavaScript validates the fields and saves successful demo records in the current browser only.
+   </p>
+  </section>
+  <main class="content">
+   <div class="layout-2">
+    <section class="card">
+     <form id="registrationForm" novalidate="">
+      <h2>
+       Farmer information
+      </h2>
+      <div class="field-grid">
+       <div class="field">
+        <label for="name">
+         Full name *
+        </label>
+        <input id="name" placeholder="Farmer full name" required=""/>
+        <span class="error" id="nameError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="mobile">
+         Mobile number *
+        </label>
+        <input id="mobile" inputmode="numeric" maxlength="10" placeholder="10-digit number" required=""/>
+        <span class="error" id="mobileError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="email">
+         Email address *
+        </label>
+        <input id="email" placeholder="name@example.com" required="" type="email"/>
+        <span class="error" id="emailError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="village">
+         Village / locality *
+        </label>
+        <input id="village" placeholder="Village name" required=""/>
+        <span class="error" id="villageError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="plot">
+         Plot code *
+        </label>
+        <input id="plot" placeholder="TF-1234" required=""/>
+        <small>
+         Format: TF- followed by 4 digits
+        </small>
+        <span class="error" id="plotError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="crop">
+         Main crop *
+        </label>
+        <select id="crop" required="">
+         <option value="">
+          Choose crop
+         </option>
+         <option>
+          Sugarcane
+         </option>
+         <option>
+          Rice
+         </option>
+         <option>
+          Wheat
+         </option>
+         <option>
+          Cotton
+         </option>
+         <option>
+          Vegetables
+         </option>
+         <option>
+          Other
+         </option>
+        </select>
+        <span class="error" id="cropError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="soil">
+         Soil type *
+        </label>
+        <select id="soil" required="">
+         <option value="">
+          Choose soil
+         </option>
+         <option>
+          Black soil
+         </option>
+         <option>
+          Loamy soil
+         </option>
+         <option>
+          Clay soil
+         </option>
+         <option>
+          Sandy soil
+         </option>
+         <option>
+          Alluvial soil
+         </option>
+        </select>
+        <span class="error" id="soilError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="method">
+         Irrigation method *
+        </label>
+        <select id="method" required="">
+         <option value="">
+          Choose method
+         </option>
+         <option>
+          Drip
+         </option>
+         <option>
+          Furrow
+         </option>
+         <option>
+          Sprinkler
+         </option>
+         <option>
+          Flood
+         </option>
+        </select>
+        <span class="error" id="methodError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="farmArea">
+         Farm area (acres) *
+        </label>
+        <input id="farmArea" min="0.1" placeholder="e.g. 2.5" required="" step="0.1" type="number"/>
+        <span class="error" id="farmAreaError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="regDate">
+         Registration date *
+        </label>
+        <input id="regDate" required="" type="date"/>
+        <span class="error" id="regDateError">
+        </span>
+       </div>
+      </div>
+      <div class="form-actions">
+       <button class="button primary" type="submit">
+        Validate registration &nearrow;
+       </button>
+       <button class="button secondary" type="reset">
+        Clear
+       </button>
+      </div>
+      <div aria-live="polite" class="result hidden" id="regSuccess">
+      </div>
+     </form>
+    </section>
+    <aside class="card">
+     <span class="kicker">
+      FORM VALIDATION
+     </span>
+     <h2>
+      Checks before saving
+     </h2>
+     <ul class="list">
+      <li>
+       <span>
+        Full name
+       </span>
+       <span class="muted">
+        Letters and spaces
+       </span>
+      </li>
+      <li>
+       <span>
+        Mobile
+       </span>
+       <span class="muted">
+        10 digits
+       </span>
+      </li>
+      <li>
+       <span>
+        Email
+       </span>
+       <span class="muted">
+        Email format
+       </span>
+      </li>
+      <li>
+       <span>
+        Plot code
+       </span>
+       <span class="muted">
+        TF-1234
+       </span>
+      </li>
+      <li>
+       <span>
+        Farm area
+       </span>
+       <span class="muted">
+        Greater than 0
+       </span>
+      </li>
+      <li>
+       <span>
+        Date
+       </span>
+       <span class="muted">
+        Not in future
+       </span>
+      </li>
+     </ul>
+     <div class="note green">
+      Successful entries are saved in browser localStorage. This project does not send private details to a server or database.
+     </div>
+     <div class="divider">
+     </div>
+     <p class="small-note">
+      <strong>
+       Project author:
+      </strong>
+      Prasham Chankeshwara
+      <br/>
+      <strong>
+       Roll No.:
+      </strong>
+      16010125033
+     </p>
+    </aside>
+   </div>
+  </main>
+  <footer class="footer">
+   <a class="brand footer-brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <p>
+    Prasham Chankeshwara &middot; 16010125033
+   </p>
+   <p>
+    &copy; 2026 Academic demo
+   </p>
+  </footer>
+ </body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Heatwave Form | TerraFlow
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="app.js">
+  </script>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <button aria-label="Toggle navigation" class="nav-toggle">
+    ☰
+   </button>
+   <nav class="nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="farm-info.html">
+     Farm Dashboard
+    </a>
+    <a href="advisory.html">
+     Advisory
+    </a>
+    <a href="gallery.html">
+     Gallery
+    </a>
+    <a href="plot-map.html">
+     Plot Map
+    </a>
+    <a href="irrigation-table.html">
+     Sensor Data
+    </a>
+    <a href="registration.html">
+     Registration
+    </a>
+    <a href="weather.html">
+     Weather
+    </a>
+    <a href="media.html">
+     Media
+    </a>
+    <a class="active" href="heatwave-validation.html">
+     Heatwave Form
+    </a>
+    <a href="heatwave-analysis.html">
+     Analytics
+    </a>
+   </nav>
+  </header>
+  <section class="page-head">
+   <span class="kicker">
+    WEATHER STRESS / DATA ENTRY
+   </span>
+   <h1>
+    Heatwave observation form
+   </h1>
+   <p>
+    Record sample heat conditions for a field. JavaScript validates the inputs and gives a simple risk category for the coursework demonstration.
+   </p>
+  </section>
+  <main class="content">
+   <div class="layout-2">
+    <section class="card">
+     <h2>
+      Enter observation
+     </h2>
+     <form id="heatForm" novalidate="">
+      <div class="field-grid">
+       <div class="field">
+        <label for="location">
+         Village / location *
+        </label>
+        <input id="location" placeholder="Location name" required=""/>
+        <span class="error" id="locationError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="obsDate">
+         Observation date *
+        </label>
+        <input id="obsDate" required="" type="date"/>
+        <span class="error" id="obsDateError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="temperature">
+         Maximum temperature (&deg;C) *
+        </label>
+        <input id="temperature" max="60" min="-10" placeholder="e.g. 39.5" required="" step="0.1" type="number"/>
+        <span class="error" id="temperatureError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="humidity">
+         Relative humidity (%) *
+        </label>
+        <input id="humidity" max="100" min="0" placeholder="0&ndash;100" required="" type="number"/>
+        <span class="error" id="humidityError">
+        </span>
+       </div>
+       <div class="field">
+        <label for="rainfall">
+         Rainfall (mm)
+        </label>
+        <input id="rainfall" max="1000" min="0" step="0.1" type="number" value="0"/>
+       </div>
+       <div class="field">
+        <label for="cropImpact">
+         Observed crop stress *
+        </label>
+        <select id="cropImpact" required="">
+         <option value="">
+          Select one
+         </option>
+         <option>
+          No visible stress
+         </option>
+         <option>
+          Leaf curling
+         </option>
+         <option>
+          Wilting
+         </option>
+         <option>
+          Leaf scorch
+         </option>
+        </select>
+        <span class="error" id="cropImpactError">
+        </span>
+       </div>
+      </div>
+      <div class="form-actions">
+       <button class="button primary" type="submit">
+        Validate &amp; assess &nearrow;
+       </button>
+       <button class="button secondary" type="reset">
+        Reset
+       </button>
+      </div>
+     </form>
+     <div aria-live="polite" class="result hidden" id="heatResult">
+     </div>
+    </section>
+    <aside class="card">
+     <span class="kicker">
+      DEMO RISK BANDS
+     </span>
+     <h2>
+      Interpretation guide
+     </h2>
+     <ul class="list">
+      <li>
+       <span>
+        Below 35&deg;C
+       </span>
+       <span class="pill">
+        Lower demo band
+       </span>
+      </li>
+      <li>
+       <span>
+        35&ndash;39.9&deg;C
+       </span>
+       <span class="pill warn">
+        Elevated
+       </span>
+      </li>
+      <li>
+       <span>
+        40&deg;C and above
+       </span>
+       <span class="pill alert">
+        High
+       </span>
+      </li>
+     </ul>
+     <div class="note">
+      These are simplified educational thresholds, not an official heatwave definition or crop-risk model. Use official weather alerts for real decisions.
+     </div>
+    </aside>
+   </div>
+  </main>
+  <footer class="footer">
+   <a class="brand footer-brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <p>
+    Prasham Chankeshwara &middot; 16010125033
+   </p>
+   <p>
+    &copy; 2026 Academic demo
+   </p>
+  </footer>
+ </body>
+</html>

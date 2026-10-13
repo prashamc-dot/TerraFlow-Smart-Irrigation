@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Sensor Data | TerraFlow
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="app.js">
+  </script>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <button aria-label="Toggle navigation" class="nav-toggle">
+    ☰
+   </button>
+   <nav class="nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="farm-info.html">
+     Farm Dashboard
+    </a>
+    <a href="advisory.html">
+     Advisory
+    </a>
+    <a href="gallery.html">
+     Gallery
+    </a>
+    <a href="plot-map.html">
+     Plot Map
+    </a>
+    <a class="active" href="irrigation-table.html">
+     Sensor Data
+    </a>
+    <a href="registration.html">
+     Registration
+    </a>
+    <a href="weather.html">
+     Weather
+    </a>
+    <a href="media.html">
+     Media
+    </a>
+    <a href="heatwave-validation.html">
+     Heatwave Form
+    </a>
+    <a href="heatwave-analysis.html">
+     Analytics
+    </a>
+   </nav>
+  </header>
+  <section class="page-head">
+   <span class="kicker">
+    SENSOR LOG / SAMPLE VALUES
+   </span>
+   <h1>
+    Soil moisture records
+   </h1>
+   <p>
+    View sample readings across farm plots. Filter the table by plot ID or status to demonstrate interactive JavaScript table handling.
+   </p>
+  </section>
+  <main class="content">
+   <section class="card">
+    <div class="field-grid" style="margin-bottom:18px">
+     <div class="field">
+      <label for="tableSearch">
+       Search plot ID
+      </label>
+      <input id="tableSearch" placeholder="e.g. TF-101"/>
+     </div>
+     <div class="field">
+      <label for="statusFilter">
+       Filter status
+      </label>
+      <select id="statusFilter">
+       <option value="all">
+        All statuses
+       </option>
+       <option value="Low">
+        Low moisture
+       </option>
+       <option value="Monitor">
+        Monitor
+       </option>
+       <option value="Moist">
+        Moist
+       </option>
+      </select>
+     </div>
+    </div>
+    <div class="table-scroll">
+     <table id="sensorTable">
+      <caption>
+       Plot sensor records &middot; illustrative data
+      </caption>
+      <thead>
+       <tr>
+        <th>
+         Plot ID
+        </th>
+        <th>
+         Date
+        </th>
+        <th>
+         Time
+        </th>
+        <th>
+         Moisture
+        </th>
+        <th>
+         Temperature
+        </th>
+        <th>
+         Rainfall
+        </th>
+        <th>
+         Status
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr data-status="Monitor">
+        <td>
+         TF-101
+        </td>
+        <td>
+         2026-10-12
+        </td>
+        <td>
+         08:00
+        </td>
+        <td>
+         38%
+        </td>
+        <td>
+         28&deg;C
+        </td>
+        <td>
+         0 mm
+        </td>
+        <td>
+         <span class="pill warn">
+          Monitor
+         </span>
+        </td>
+       </tr>
+       <tr data-status="Low">
+        <td>
+         TF-102
+        </td>
+        <td>
+         2026-10-12
+        </td>
+        <td>
+         08:00
+        </td>
+        <td>
+         24%
+        </td>
+        <td>
+         30&deg;C
+        </td>
+        <td>
+         0 mm
+        </td>
+        <td>
+         <span class="pill alert">
+          Low
+         </span>
+        </td>
+       </tr>
+       <tr data-status="Moist">
+        <td>
+         TF-103
+        </td>
+        <td>
+         2026-10-12
+        </td>
+        <td>
+         08:00
+        </td>
+        <td>
+         61%
+        </td>
+        <td>
+         26&deg;C
+        </td>
+        <td>
+         2 mm
+        </td>
+        <td>
+         <span class="pill">
+          Moist
+         </span>
+        </td>
+       </tr>
+       <tr data-status="Monitor">
+        <td>
+         TF-101
+        </td>
+        <td>
+         2026-10-12
+        </td>
+        <td>
+         12:00
+        </td>
+        <td>
+         34%
+        </td>
+        <td>
+         31&deg;C
+        </td>
+        <td>
+         0 mm
+        </td>
+        <td>
+         <span class="pill warn">
+          Monitor
+         </span>
+        </td>
+       </tr>
+       <tr data-status="Low">
+        <td>
+         TF-102
+        </td>
+        <td>
+         2026-10-12
+        </td>
+        <td>
+         12:00
+        </td>
+        <td>
+         27%
+        </td>
+        <td>
+         33&deg;C
+        </td>
+        <td>
+         0 mm
+        </td>
+        <td>
+         <span class="pill alert">
+          Low
+         </span>
+        </td>
+       </tr>
+       <tr data-status="Moist">
+        <td>
+         TF-103
+        </td>
+        <td>
+         2026-10-12
+        </td>
+        <td>
+         12:00
+        </td>
+        <td>
+         58%
+        </td>
+        <td>
+         29&deg;C
+        </td>
+        <td>
+         2 mm
+        </td>
+        <td>
+         <span class="pill">
+          Moist
+         </span>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <p class="small-note" id="tableCount" style="margin-top:13px">
+     Showing 6 records.
+    </p>
+   </section>
+   <div class="layout-3" style="margin-top:18px">
+    <div class="metric">
+     <small>
+      LOWEST SAMPLE
+     </small>
+     <strong>
+      24%
+     </strong>
+     <p>
+      Plot TF-102
+     </p>
+    </div>
+    <div class="metric">
+     <small>
+      HIGHEST SAMPLE
+     </small>
+     <strong>
+      61%
+     </strong>
+     <p>
+      Plot TF-103
+     </p>
+    </div>
+    <div class="metric">
+     <small>
+      DATA SOURCE
+     </small>
+     <strong style="font-size:1.2rem">
+      Demo only
+     </strong>
+     <p>
+      No hardware connected
+     </p>
+    </div>
+   </div>
+  </main>
+  <footer class="footer">
+   <a class="brand footer-brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <p>
+    Prasham Chankeshwara &middot; 16010125033
+   </p>
+   <p>
+    &copy; 2026 Academic demo
+   </p>
+  </footer>
+ </body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Farm Dashboard | TerraFlow
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="app.js">
+  </script>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <button aria-label="Toggle navigation" class="nav-toggle">
+    ☰
+   </button>
+   <nav class="nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a class="active" href="farm-info.html">
+     Farm Dashboard
+    </a>
+    <a href="advisory.html">
+     Advisory
+    </a>
+    <a href="gallery.html">
+     Gallery
+    </a>
+    <a href="plot-map.html">
+     Plot Map
+    </a>
+    <a href="irrigation-table.html">
+     Sensor Data
+    </a>
+    <a href="registration.html">
+     Registration
+    </a>
+    <a href="weather.html">
+     Weather
+    </a>
+    <a href="media.html">
+     Media
+    </a>
+    <a href="heatwave-validation.html">
+     Heatwave Form
+    </a>
+    <a href="heatwave-analysis.html">
+     Analytics
+    </a>
+   </nav>
+  </header>
+  <section class="page-head">
+   <span class="kicker">
+    FIELD OVERVIEW / PLOT TF-01
+   </span>
+   <h1>
+    Farm dashboard
+   </h1>
+   <p>
+    A compact overview of the sample sugarcane farm, its soil moisture, and the workflow used to review irrigation needs.
+   </p>
+  </section>
+  <main class="content">
+   <div class="layout-3">
+    <div class="metric">
+     <small>
+      AVERAGE MOISTURE
+     </small>
+     <strong>
+      38%
+     </strong>
+     <p>
+      <span class="pill warn">
+       Monitor field
+      </span>
+     </p>
+    </div>
+    <div class="metric">
+     <small>
+      DEMO PLOTS
+     </small>
+     <strong>
+      03
+     </strong>
+     <p>
+      Illustrative plot records
+     </p>
+    </div>
+    <div class="metric">
+     <small>
+      FIELD STATUS
+     </small>
+     <strong style="font-size:1.3rem">
+      Review today
+     </strong>
+     <p>
+      Check conditions before irrigation.
+     </p>
+    </div>
+   </div>
+   <div class="layout-2" style="margin-top:18px">
+    <section class="card">
+     <h2>
+      Plot status summary
+     </h2>
+     <div class="table-scroll">
+      <table>
+       <caption>
+        Sample farm records
+       </caption>
+       <thead>
+        <tr>
+         <th>
+          Plot ID
+         </th>
+         <th>
+          Crop stage
+         </th>
+         <th>
+          Moisture
+         </th>
+         <th>
+          Review
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          TF-101
+         </td>
+         <td>
+          Tillering
+         </td>
+         <td>
+          38%
+         </td>
+         <td>
+          <span class="pill warn">
+           Monitor
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          TF-102
+         </td>
+         <td>
+          Grand Growth
+         </td>
+         <td>
+          24%
+         </td>
+         <td>
+          <span class="pill alert">
+           Check soon
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          TF-103
+         </td>
+         <td>
+          Maturity
+         </td>
+         <td>
+          61%
+         </td>
+         <td>
+          <span class="pill">
+           Moist
+          </span>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p class="small-note">
+      All values on this page are sample data, not readings from connected hardware.
+     </p>
+    </section>
+    <section class="card">
+     <h2>
+      Suggested workflow
+     </h2>
+     <ol class="muted">
+      <li>
+       Record moisture and field conditions.
+      </li>
+      <li>
+       Check the forecast for expected rainfall.
+      </li>
+      <li>
+       Review the advisory output and inspect the crop.
+      </li>
+      <li>
+       Record the decision and recheck the soil.
+      </li>
+     </ol>
+     <a class="button primary" href="advisory.html">
+      Open advisory &nearrow;
+     </a>
+    </section>
+   </div>
+   <div class="layout-2" style="margin-top:18px">
+    <section class="card">
+     <h2>
+      Crop growth stages
+     </h2>
+     <ul class="list">
+      <li>
+       <span>
+        Germination
+       </span>
+       <span class="muted">
+        Sprouting
+       </span>
+      </li>
+      <li>
+       <span>
+        Tillering
+       </span>
+       <span class="muted">
+        Shoot development
+       </span>
+      </li>
+      <li>
+       <span>
+        Grand Growth
+       </span>
+       <span class="muted">
+        Rapid growth
+       </span>
+      </li>
+      <li>
+       <span>
+        Maturity
+       </span>
+       <span class="muted">
+        Ripening
+       </span>
+      </li>
+     </ul>
+    </section>
+    <section class="card">
+     <h2>
+      Monitoring equipment
+     </h2>
+     <ul class="list">
+      <li>
+       <span>
+        Soil moisture probe
+       </span>
+       <span class="pill">
+        Moisture
+       </span>
+      </li>
+      <li>
+       <span>
+        Temperature sensor
+       </span>
+       <span class="pill">
+        Temperature
+       </span>
+      </li>
+      <li>
+       <span>
+        Humidity sensor
+       </span>
+       <span class="pill">
+        Humidity
+       </span>
+      </li>
+      <li>
+       <span>
+        Rain gauge
+       </span>
+       <span class="pill">
+        Rainfall
+       </span>
+      </li>
+     </ul>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <a class="brand footer-brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <p>
+    Prasham Chankeshwara &middot; 16010125033
+   </p>
+   <p>
+    &copy; 2026 Academic demo
+   </p>
+  </footer>
+ </body>
+</html>

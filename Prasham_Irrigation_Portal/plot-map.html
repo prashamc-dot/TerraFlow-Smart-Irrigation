@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Plot Map | TerraFlow
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <script defer="" src="app.js">
+  </script>
+ </head>
+ <body>
+  <header class="topbar">
+   <a class="brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <button aria-label="Toggle navigation" class="nav-toggle">
+    ☰
+   </button>
+   <nav class="nav">
+    <a href="index.html">
+     Home
+    </a>
+    <a href="farm-info.html">
+     Farm Dashboard
+    </a>
+    <a href="advisory.html">
+     Advisory
+    </a>
+    <a href="gallery.html">
+     Gallery
+    </a>
+    <a class="active" href="plot-map.html">
+     Plot Map
+    </a>
+    <a href="irrigation-table.html">
+     Sensor Data
+    </a>
+    <a href="registration.html">
+     Registration
+    </a>
+    <a href="weather.html">
+     Weather
+    </a>
+    <a href="media.html">
+     Media
+    </a>
+    <a href="heatwave-validation.html">
+     Heatwave Form
+    </a>
+    <a href="heatwave-analysis.html">
+     Analytics
+    </a>
+   </nav>
+  </header>
+  <section class="page-head">
+   <span class="kicker">
+    FARM LAYOUT / PLOT VIEW
+   </span>
+   <h1>
+    Explore the plot layout
+   </h1>
+   <p>
+    A schematic farm layout for demonstrating how separate plots could be tracked. It is not a surveyed or GPS-accurate map.
+   </p>
+  </section>
+  <main class="content">
+   <div class="layout-2">
+    <section class="card">
+     <h2>
+      Demo plot layout
+     </h2>
+     <div class="map-placeholder" style="min-height:360px">
+      <div>
+       <strong>
+        TerraFlow field grid
+       </strong>
+       <p>
+        TF-101 &middot; TF-102 &middot; TF-103
+       </p>
+       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:15px">
+        <span class="pill warn" style="padding:14px">
+         TF-101
+         <br/>
+         38% moisture
+        </span>
+        <span class="pill alert" style="padding:14px">
+         TF-102
+         <br/>
+         24% moisture
+        </span>
+        <span class="pill" style="padding:14px">
+         TF-103
+         <br/>
+         61% moisture
+        </span>
+        <span class="pill" style="padding:14px">
+         Water tank
+         <br/>
+         Demo
+        </span>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="card">
+     <h2>
+      Plot details
+     </h2>
+     <ul class="list">
+      <li>
+       <span>
+        TF-101
+       </span>
+       <span class="muted">
+        Tillering &middot; Monitor
+       </span>
+      </li>
+      <li>
+       <span>
+        TF-102
+       </span>
+       <span class="muted">
+        Grand Growth &middot; Low
+       </span>
+      </li>
+      <li>
+       <span>
+        TF-103
+       </span>
+       <span class="muted">
+        Maturity &middot; Moist
+       </span>
+      </li>
+     </ul>
+     <div class="note">
+      To create a real plot map, add GPS coordinates or a map provider. This diagram uses example plot labels and values only.
+     </div>
+     <a class="button secondary" href="irrigation-table.html" style="margin-top:12px">
+      View sensor records &nearrow;
+     </a>
+    </section>
+   </div>
+  </main>
+  <footer class="footer">
+   <a class="brand footer-brand" href="index.html">
+    <span class="brand-symbol">
+     tf
+    </span>
+    <span>
+     <b>
+      TerraFlow
+     </b>
+     <small>
+      SMART IRRIGATION PORTAL
+     </small>
+    </span>
+   </a>
+   <p>
+    Prasham Chankeshwara &middot; 16010125033
+   </p>
+   <p>
+    &copy; 2026 Academic demo
+   </p>
+  </footer>
+ </body>
+</html>
